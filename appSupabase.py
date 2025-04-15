@@ -19,7 +19,7 @@ supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 # Search pending messages
 def search_messages():
-    response = supabase.table("messages").select("*").eq("status", "pending").execute()
+    response = supabase.table("messages").select("*").eq("status", "pendente").execute()
     return response.data
 
 # Send messages with Zapi
@@ -55,8 +55,8 @@ messages = search_messages()
 for msg in messages:
     success = send_messages(msg["phone"], msg["message"])
     if success:
-        update_status(msg["id"], "sent")
+        update_status(msg["id"], "enviado")
         print(f"✅ Mensagem enviada com sucesso para {msg['name']}, número: {msg['phone']}")
     else:
-        update_status(msg["id"], "error")
+        update_status(msg["id"], "erro")
         print(f"❌ Falha ao enviar mensagem para {msg['name']}, número: {msg['phone']}")
