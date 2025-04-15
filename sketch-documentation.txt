@@ -1,0 +1,36 @@
+DOCUMENTAÇÃO PASSO A PASSO - PROJETO B2BFLOW
+
+URL PROJECT: https://zzoukrxveknqqnfxgknj.supabase.co
+
+SUPABASE KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp6b3Vrcnh2ZWtucXFuZnhna25qIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0NDY1Nzc5MiwiZXhwIjoyMDYwMjMzNzkyfQ.dI5pTcV2R_Ts5B_6DZdx2rBTSOQolNviZYNRTKATVCs
+
+API INSTÂNCIA ZAPI: https://api.z-api.io/instances/3DFB944F3EFE50BE79A94AF752FBD4C9/token/F891D2636DFCE368AC0A0D10/send-text
+
+ID INSTÂNCIA ZAPI: 3DFB944F3EFE50BE79A94AF752FBD4C9
+
+TOKEN INSTÂNCIA ZAPI: F891D2636DFCE368AC0A0D10
+
+1) fazendo cadastro no Supabase
+2) crie um projeto no Supabase => servidor EUA North Virginia
+3) crie uma nova tabela 'mensagens' com os campos 'id, name, phone, message, status'
+4) vá nas configurações do supabase e copie a URL do projeto e a URL de API KEY service_role (privada)
+
+5) cadastre-se na z-api, conecte o seu Whatsapp no QR Code da Zapi
+6) copie a URL da API, ID, Token da instância no Zapi e na aba de 'seguranças' terá um token de segurança (diferente do token de instância) que também devemos configurar, assim que aparecer como habilitado na conta, podemos seguir adiante.
+
+7) crie uma pasta no vscode, instale a lib e as variáveis de ambiente que terá todas suas chaves restritas:
+pip install supabase requests python-dotenv
+
+8) crie o arquivo .env com suas chaves (não compartilhe esse arquivo)
+EX:
+SUPABASE_URL=https://<seu-projeto>.supabase.co
+SUPABASE_KEY=eyJhbGciOiJ...
+ZAPI_INSTANCE_ID=suainstanceid
+ZAPI_TOKEN=seutokenzapi
+CLIENT_TOKEN_ZAPI=client_token_zapi
+
+9) crie um arquivo 'app.py' que será o nosso script em python que fará o envio das mensagens
+
+10) Antes de rodar o script, adicione uma linha no banco de dados do Supabase, o numero precisa estar nessa formatação: "55119999999"
+
+11) Rode o script e confira qual foi o retorno, caso tenha sido 200 e um print de sucesso. A mensagem foi enviada para o número no whatsapp automaticamente
