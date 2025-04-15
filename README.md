@@ -119,17 +119,6 @@ Se tudo estiver certo, você verá um retorno com **Status 200** e a confirmaç�
 
 ---
 
-## 🛠️ Personalizações futuras
-
-Você pode adaptar o projeto para:
-
-- Rodar com agendamento (via `schedule`)
-- Enviar mensagens em massa
-- Integrar com uma interface web
-- Receber mensagens de volta
-
----
-
 ## 📬 Suporte
 
 Em caso de dúvidas ou melhorias, entre em contato ou envie uma *issue* neste repositório.
