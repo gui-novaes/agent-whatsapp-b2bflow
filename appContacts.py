@@ -27,7 +27,7 @@ def send_messages(number, text):
     }
     
     response = requests.post(url, json=payload, headers=headers)
-    #Aqui está o erro
+
     print("URL: ", url)
     print("Payload: ", payload)
     print("Response: ", response.text)

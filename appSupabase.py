@@ -12,8 +12,6 @@ ZAPI_INSTANCE_ID = os.getenv("ZAPI_INSTANCE_ID")
 ZAPI_TOKEN = os.getenv("ZAPI_TOKEN")
 CLIENT_TOKEN_ZAPI = os.getenv("CLIENT_TOKEN_ZAPI")
 
-print(SUPABASE_URL, SUPABASE_KEY, ZAPI_INSTANCE_ID, ZAPI_TOKEN)
-
 # Conect Supabase
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
@@ -37,7 +35,7 @@ def send_messages(number, text):
     }
     
     response = requests.post(url, json=payload, headers=headers)
-    #Aqui está o erro
+
     print("URL: ", url)
     print("Payload: ", payload)
     print("Response: ", response.text)
