@@ -88,7 +88,7 @@ Neste arquivo ficará o script responsável por:
 - Enviar automaticamente as mensagens usando a API do Z-API
 - Atualizar o status da mensagem no banco de dados
 
-> 💡 **[Clique aqui](https://github.com/seuusuario/seurepositorio)** para acessar o código completo no GitHub.
+> 💡 **[Clique aqui](https://github.com/gui-novaes/agent-whatsapp-b2bflow/blob/main/appSupabase.py)** para acessar o código completo no GitHub.
 
 ---
 
